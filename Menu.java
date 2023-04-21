@@ -180,7 +180,7 @@ public class Menu {
         String date = input.nextLine();                                 //*
         System.out.print("time: ");                                     //*
         String time = input.nextLine();                                 //*
-        System.out.print("price range(example: 300000 to 800000): ");   //*
+        System.out.print("price range(example: 300000 to 800000): ");   //* Just enter the price range(price1 to price2) 
         String price = input.nextLine();                                //*
 //*************************************************************************
         if (price.equals("")) {
@@ -190,7 +190,7 @@ public class Menu {
         }
 //******************************************************************************************
         else {
-            String[] priceArray = price.split(" to ");
+            String[] priceArray = price.split(" to ");              //fix range of price
             int price1 = Integer.parseInt(priceArray[0]);
             int price2 = Integer.parseInt(priceArray[1]);
             flights.filterFlight(flightId, origin, destination, date, time, price1, price2);
